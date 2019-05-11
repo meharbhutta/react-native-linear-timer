@@ -1,0 +1,54 @@
+{
+  "name": "react-native-linear-timer",
+  "version": "1.0.0",
+  "description": "Linear Timer component for React Native",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "src/"
+  ],
+  "keywords": [
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react-native-linear",
+    "react-native-timer",
+    "react-native-linear-timer",
+    "react native",
+    "react native linear",
+    "react native timer",
+    "react native linear timer",
+    "react",
+    "mobile",
+    "ios",
+    "android",
+    "ui",
+    "timer",
+    "linear"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meharbhutta/react-native-linear-timer.git"
+  },
+  "author": "Muhammad Mehar <meharbhutta@gmail.com> (https://twitter.com/meharbhutta)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meharbhutta/react-native-linear-timer/issues"
+  },
+  "homepage": "https://github.com/meharbhutta/react-native-linear-timer#readme",
+  "peerDependencies": {
+    "prop-types": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "babel-jest": "^24.7.1",
+    "metro-react-native-babel-preset": "^0.53.1",
+    "prettier": "^1.16.4",
+    "typescript": "next"
+  }
+}
