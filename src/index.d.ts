@@ -54,4 +54,5 @@ declare module 'react-native-linear-timer' {
   class LinearTimer extends React.Component<LinearTimerProps, {}> {}
 
   export default LinearTimer;
+  export { LinearTimer };
 }

@@ -43,11 +43,11 @@ export default class LinearTimer extends React.Component {
     this.timeWidth = undefined;
     this.widthCheck = undefined;
 
-    const { min, onTimeElapsed } = this.props,
-      { remainingTime: previousTime } = this.state,
-      remainingTime = previousTime - 1;
-
     this.timer = setInterval(() => {
+      const { min, onTimeElapsed } = this.props,
+        { remainingTime: previousTime } = this.state,
+        remainingTime = previousTime - 1;
+
       this.setState(
         {
           remainingTime,
@@ -104,7 +104,7 @@ export default class LinearTimer extends React.Component {
               alignSelf: this.widthCheck ? 'flex-start' : 'flex-end'
             }}
             onLayout={({ nativeEvent }) => {
-              if (!this.timeWidth) this.timeWidth = nativeEvent.layout.width;
+              if (!this.timeWidth) this.timeWidth = nativeEvent.layout.width + 2;
             }}
           >
             {`${Math.ceil(remainingTime / 60)} min`}
