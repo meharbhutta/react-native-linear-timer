@@ -104,7 +104,7 @@ export default class LinearTimer extends React.Component {
               alignSelf: this.widthCheck ? 'flex-start' : 'flex-end'
             }}
             onLayout={({ nativeEvent }) => {
-              if (!this.timeWidth) this.timeWidth = nativeEvent.layout.width + 2;
+              if (!this.timeWidth) this.timeWidth = nativeEvent.layout.width + 4;
             }}
           >
             {`${Math.ceil(remainingTime / 60)} min`}
