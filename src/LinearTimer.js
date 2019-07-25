@@ -63,6 +63,27 @@ export default class LinearTimer extends React.Component {
     }, 1000);
   }
 
+  componentDidUpdate(prevProps) {
+    if (
+      prevProps &&
+      this.props &&
+      prevProps.min &&
+      this.props.min &&
+      (prevProps.min !== this.props.min)
+    ) this._reset()
+  }
+
+  _reset = () => {
+    const {
+      min
+    } = this.props
+
+    this.setState({
+      width: '100%',
+      remainingTime: min
+    });
+  }
+
   componentWillUnmount() {
     if (this.timer) clearInterval(this.timer);
   }
