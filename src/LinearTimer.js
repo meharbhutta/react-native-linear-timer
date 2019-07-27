@@ -7,6 +7,7 @@ import { Text, View, StyleSheet, ViewPropTypes } from 'react-native';
 const ViewPropTypesStyle = ViewPropTypes ? ViewPropTypes.style : View.propTypes.style;
 
 export default class LinearTimer extends React.Component {
+
   static propTypes = {
     min: PropTypes.number.isRequired,
     height: PropTypes.number,
@@ -30,13 +31,15 @@ export default class LinearTimer extends React.Component {
     onTimeElapsed: () => {}
   };
 
+  _initialState = min => ({
+    width: '100%',
+    remainingTime: min * 60
+  });
+
   constructor(props) {
     super(props);
 
-    this.state = {
-      width: '100%',
-      remainingTime: props.min * 60
-    };
+    this.state = this._initialState(props.min);
   }
 
   componentDidMount() {
@@ -70,18 +73,15 @@ export default class LinearTimer extends React.Component {
       prevProps.min &&
       this.props.min &&
       (prevProps.min !== this.props.min)
-    ) this._reset()
+    ) this._reset();
   }
 
   _reset = () => {
     const {
       min
-    } = this.props
+    } = this.props;
 
-    this.setState({
-      width: '100%',
-      remainingTime: min
-    });
+    this.setState(this._initialState(min));
   }
 
   componentWillUnmount() {
